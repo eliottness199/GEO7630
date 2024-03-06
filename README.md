@@ -38,9 +38,9 @@ L’objectif du projet est de mettre en avant la qualité environnementale des p
 
 ![](https://lh7-us.googleusercontent.com/docsz/AD_4nXfJbPvz6ps8uvv5jG_Iz8uAGT5PsvzxIe_6vzl1hZzOgfH5KvH_u9Uy7TWaA6SgIMQ7uydYtNq4C9P9LMKVsc4ZIKKTevsf_zlVUkar62SzK4hQpo0-sZTxXEQId9yLFL7mfgCjXOkVmcqk57MXn3Y?key=mO37J39l4RNscQY75Ojvjg)
 
-
 **PARTIE 1 : JEUX DE DONNÉES LIÉS AU TRANSPORT** 
 
+ 
 
 **1.1. Comptage des vélos sur les pistes cyclables (vecteur / points)** 
 
@@ -56,12 +56,14 @@ Pour ce jeu de données, deux méthodes de traitements sont utilisées selon l�
 
 Grâce à ce traitement, nous pourrons réaliser une interpolation permettant de mettre en avant la concentration de vélos sur l’ensemble de l’île de Montréal, et cela pour chaque année. L’influence (ou non) de la création du REV pourra aussi être mise en avant (\*_voir Compilation des données de comptage_).
 
+ 
 
 **1.2.  Réseau cyclable et Réseau Express Vélo (REV) (vecteur / lignes)** 
 
 Dans notre cas, aucun traitement n’est nécessaire pour ces jeux de données. Une jointure spatiale sera réalisée lorsque les différentes interpolations seront effectuées (comptage, indice) afin de mettre en avant la qualité environnementale des pistes cyclables.
 
  
+
 **1.3.  Déplacement MTL Trajet (2017) (vecteur / points)** 
 
 Nous gardons seulement les points dont le mode de transport est le vélo et qui sont contenus dans l’île de Montréal en réalisant un « Clip » avec les limites terrestres.
@@ -88,9 +90,9 @@ Pour finir, nous réalisons une compilation des données de comptage de vélos, 
 
 Ce traitement nous permet d’obtenir une meilleure répartition des données ponctuelles dans l’espace, afin d’optimiser le résultat du krigeage par la suite. Cependant, certaines données (1 vélo) pourraient être comptabilisées plusieurs fois, par exemple dans le cas où un point du jeu de données “Déplacement MTL Trajet” a été pris proche des stations de BIXI ou d’un compteur de la ville de Montréal. En utilisant un krigeage (méthode statistique), nous supposons que les conséquences de cette surestimation potentielle seront minimes. 
 
-
 **PARTIE 2 : JEUX DE DONNÉES LIÉS À L’INDICE INTÉGRÉ** 
 
+ 
 
 **2.1. Collisions routières (vecteur / points) · CRITÈRE 1** 
 
@@ -100,10 +102,12 @@ Ce jeu de données liste les collisions survenues à Montréal depuis 2012. Dans
 
 La Ville de Montréal mesure la qualité de l’air sous la forme d’une valeur numérique appelée « indice de la qualité de l’air (IQA) ». Le présent ensemble de données permet d'accéder aux valeurs historiques de l'IQA, mises à jour quotidiennement. Une interpolation sera nécessaire pour établir une cartographie estimative de la qualité de l’air sur l’ensemble de l’île de Montréal. Selon les valeurs de qualité de l’air, des classes seront alors créées. 
 
+ 
 
 **2.3. Îlots de chaleur (vecteur / polygones) · CRITÈRE 3** 
 
 Polygones représentant les îlots de chaleur à la surface du sol. Aucun traitement est nécessaire pour ce jeu de données puisque les polygones sont déjà distinguées en 5 catégories, sur l’ensemble de la zone d’étude.
+
  
 
 **2.4. Mesures de niveaux acoustiques (vecteur / points) · CRITÈRE 4** 
@@ -119,3 +123,4 @@ Aucun traitement n’est nécessaire pour ce jeu de données. Les limites terres
 **Erreurs et apprentissage du FME :**
 
 Face à la très grande quantité de jeux de données, notamment due à la dimension temporelle utilisée, l’ergonomie et la clarté de l’ensemble du Workbench FME n’est pas optimal. À l’avenir, pour alléger le FME, il semble pertinent d’utiliser soit, moins de jeux de données différents, soit de réduire la plage temporelle traitée.
+
