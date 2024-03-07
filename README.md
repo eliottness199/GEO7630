@@ -16,7 +16,7 @@ Jeudi 7 Mars 2024
 
 **QUALITÉ ENVIRONNEMENTALE DES FLUX DE VÉLOS À MONTRÉAL** 
 
- 
+ ****Nous n'avons pas eu le temps de faire rouler le FME pour la date de remise. Un problème de projection de dernière minute nous a empêchés. Le QGIS sert seulement à montrer que nous sommes bien dans la bonne projection et que le FME fonctionne.****
 
 **RÉSUMÉ DU PROJET :** 
 
